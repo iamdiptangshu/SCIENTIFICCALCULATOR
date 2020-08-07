@@ -1,0 +1,85 @@
+﻿
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>calculator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=arvo" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="container-fluid heade">
+<h1>SCIENTIFIC CALCULATOR</h1>
+<br>
+<br>
+<h5>A miniproject by Diptangshu Chattopadhyay</h5>
+<br>
+</div>
+<br>
+<form name="calculator">
+<div>
+<table align="center">
+<tr>
+<td colspan="5" ><input class="a" name="display" value="0" size="20" maxlength="30"></td>
+</tr>
+<tr>
+<td><input class="b" type="button" value="  √  " onclick="if (cn(this.form.display.value)) { sqrt(this.form) }"></td>
+<td><input class="b" type="button" value="  1  " onclick="ac(this.form.display, '1')"></td>
+<td><input class="b" type="button" value="  2  " onclick="ac(this.form.display, '2')"></td>
+<td><input class="b" type="button" value="  3  " onclick="ac(this.form.display, '3')"></td>
+<td><input class="b" type="button" value="  -  " onclick="ac(this.form.display, '-')"></td>
+</tr>
+<tr>
+<td><input class="b" type="button" value="  ln " onclick="if (cn(this.form.display.value)) { ln(this.form) }"></td>
+<td><input class="b" type="button" value="  4  " onclick="ac(this.form.display, '4')"></td>
+<td><input class="b" type="button" value="  5  " onclick="ac(this.form.display, '5')"></td>
+<td><input class="b" type="button" value="  6  " onclick="ac(this.form.display, '6')"></td>
+<td><input class="b" type="button" value="  *  " onclick="ac(this.form.display, '*')"></td>
+</tr>
+<tr>
+<td><input class="b"  type="button" value=" exp " onclick="if (cn(this.form.display.value)) { exp(this.form) }"></td>
+<td><input class="b"  type="button" value="  7  " onclick="ac(this.form.display, '7')"></td>
+<td><input class="b"  type="button" value="  8  " onclick="ac(this.form.display, '8')"></td>
+<td><input class="b"  type="button" value="  9  " onclick="ac(this.form.display, '9')"></td>
+<td><input class="b"  type="button" value="  /  " onclick="ac(this.form.display, '/')"></td>
+</tr>
+<tr>
+<td><input class="b" type="button" value="  x² " onclick="if (cn(this.form.display.value)) { square(this.form) }"></td>
+<td><input class="b" type="button" value="  0  " onclick="ac(this.form.display, '0')"></td>
+<td><input class="b" type="button" value="   . " onclick="ac(this.form.display, '.')"></td>
+<td><input class="b" type="button" value=" +/- " onclick="changesign(this.form.display)"></td>
+<td><input class="b" type="button" value="   + " onclick="ac(this.form.display, '+')"></td>
+</tr>
+<tr>
+<td><input class="b" type="button" value="  %  " onclick="if (cn(this.form.display.value)) { per(this.form) }"></td>
+<td><input class="b" type="button" value="  π  " onclick="ac(this.form.display, '3.141')"></td>
+<td><input class="b" type="button" value="  e  " onclick="ac(this.form.display, '2.718')"></td>
+<td><input class="b" type="button" value="sinh " onclick="if (cn(this.form.display.value)) { sinh(this.form) }"></td>
+<td><input class="b" type="button" value="cosh " onclick="if (cn(this.form.display.value)) { cosh(this.form) }"></td>
+</tr>
+<tr>
+<tr>
+<td ><input class="b" type="button" value="  (  " onclick="ac(this.form.display, '(')"></td>
+<td ><input class="b" type="button" value="cos  " onclick="if (cn(this.form.display.value)) { cos(this.form) }"></td>
+<td ><input class="b" type="button" value=" sin " onclick="if (cn(this.form.display.value)) { sin(this.form) }"></td>
+<td ><input class="b" type="button" value=" tan " onclick="if (cn(this.form.display.value)) { tan(this.form) }"></td>
+<td ><input class="b" type="button" value="  )  " onclick="ac(this.form.display, ')')"></td>
+</tr>
+
+<td colspan="2"><input type="button" value="Clear All" onclick="this.form.display.value = 0 "></td>
+<td colspan="1"><input type="button" value=" Delete " onclick="dc(this.form.display)"></td>
+<td colspan="2"><input type="button" value="Calculate" name="Calculate" onclick="if (cn(this.form.display.value)) { compute(this.form) }"></td>
+</tr>
+</table>
+</div>
+</form>
+<br>
+<div class="container-fluid foote">
+<br>
+Copyrights Reserved
+<br>
+</div>
+<script src="abc.js"></script>
+</body>
+</html>
